@@ -1,0 +1,224 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Hyperlink Setup
+ \hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=blue,
+     citecolor = black,      
+     urlcolor=blue,
+     }
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{fontawesome}
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Jerrod Pelley} \\ \vspace{10pt}
+    \href{https://pells31.github.io/}{pells31.github.io} \linebreak
+    \faLinkedin \, \href{http://linkedin.com/in/jerrod-pelley}{linkedin.com/in/jerrod-pelley/} \hspace{10pt}
+    \faGithub \, \href{https://github.com/Pells31}{github.com/Pells31}\linebreak
+    \address{\faEnvelope{ \url{jpelley3@gatech.edu}}} \hspace{10pt}
+    \faMapMarker{ Edmonton, AB} \hspace{10pt}
+    \address{\faPhone{ (902)-718-9230}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology, 4.0 GPA}{Atlanta, GA}
+      {Master of Science in Computer Science}{Sep. 2020 -- Present}
+    \resumeSubheading
+      {Arizona State University}{Tempe, AZ}
+      {Bachelor of Science in Electrical Engineering}{Jan. 2015 -- Dec. 2020}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Vehicle Make and Model Classifier} $|$ \emph{Pytorch, Imbalanced Learn, Matplotlib, NumPy, Pandas}}{}
+      \resumeProjectHeading
+          {\faGithub{ \href{https://github.com/Pells31/Vehicle-Make-and-Model-Recognition}{github.com/Pells31/Vehicle-Make-and-Model-Recognition}}}{}
+          \resumeItemListStart
+            \resumeItem{Vehicle make, model, and year classifier using CNNs and transfer learning}
+            \resumeItem{Fine-grained image classification context}
+            \resumeItem{Unified multiple publicly available datasets, and utilized data augmentation, to ensure adequate training samples}
+            \resumeItem{Fine-tuned pre-trained ResNet model}
+            \resumeItem{Imbalanced datasets, data cleaning, data pre-processing, data augmentation, CNNs, PyTorch, Transfer Learning, Stratified Sampling}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Image Captioning} $|$ \emph{Pytorch, Torchvision, Scikit-Learn, Pandas, Pillow, Matplotlib}}{}
+      \resumeProjectHeading
+          {\faGithub{ \href{https://github.com/Pells31/Image-Captioning}{github.com/Pells31/Image-Captioning}}}{}
+          \resumeItemListStart
+            \resumeItem{Evaluated the performance of three increasingly capable sequence to sequence models for the task of image caption generation}
+            \resumeItem{BLEU scores, seq2seq, pre-trained model, Beam search, Transformers, Attention}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Supervised Learning Survey} $|$ \emph{Python, Scikit-Learn, Matplotlib, NumPy, Pandas}}{}
+          \resumeItemListStart
+            \resumeItem{Analyzed performance of various Supervised Learning Algorithms on multiple datasets using ML best practices (Cross-validation, Train/Test split)}
+            \resumeItem{Hyper-parameter tuning via visualizations and grid search}
+            \resumeItem{Noted performance differences in relation to time, scalability, accuracy, convergence, and dataset properties}
+            \resumeItem{Decision Trees, Boosting, Neural Networks,  SVM, KNN}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Classification Trading Strategy} $|$ \emph{Python, Pandas, NumPy, SciPy}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented a Random Forest Classification Learner (from scratch) for hypothetical stock market trading}
+            \resumeItem{Compared performance of Learner to manual, rules-based strategy}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Technical Sales Account Manager}{April 2014 -- Jan. 2021}
+      {Kohltech Windows \& Entrance Systems}{Edmonton, AB}
+      \resumeItemListStart
+      \resumeItem{Residential and Light Commercial Windows and Doors}
+      	\resumeItemListStart	
+        	\resumeItem{Managed upwards of twenty dealer accounts (B2B setting) with a track record of success}
+        \resumeItemListEnd
+        \setlength{\itemsep}{5pt}
+        \resumeItem{Implemented open source Mediawiki software for internal company communication}
+        	\resumeItemListStart
+            	\resumeItem{LAMP Stack}
+                \resumeItem{Employee training}
+            \resumeItemListEnd
+      \resumeItemListEnd
+ 
+  \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Machine Learning}{:  Classification, Regression, Clustering, Dimensionality Reduction, EDA, Modeling, Deep Neural Networks, CNNs, RNNs, Transformers} \\
+     \textbf{Data Science}{: Cleaning, Manipulation, Scraping, Data Visualization, Big Data } \\
+     \textbf{Languages}{: Python, C, JavaScript, D3.js} \\
+     {\textbf{DevOps}}{: Docker, Kubernetes } \\
+     {\textbf{Data Engineering}}{: Apache Spark, PySpark, SQL, GCP (Google Cloud Platform) } \\
+     \textbf{Developer Tools}{: Git, OpenRefine, Tableau, VS Code, Visual Studio, PyCharm, Linux, Windows} \\
+     \textbf{Libraries}{: Pytorch, Pandas, NumPy, Matplotlib, Scikit-Learn, Flask, Imbalanced-Learn, Pillow} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
